@@ -7,7 +7,7 @@ from utils.calculations import calculate_water_goal, calculate_calorie_goal
 async def cmd_check_progress(message: Message):
     user_id = str(message.from_user.id)
     if user_id not in users:
-        await message.answer("Profile not found. Please set up your profile using /set_profile.")
+        await message.answer("🚫 Profile not found. Please set up your profile using /set_profile.")
         return
     user_data = users[user_id]
     weight = user_data.get("weight", 0)

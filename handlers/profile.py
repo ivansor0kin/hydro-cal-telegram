@@ -7,7 +7,7 @@ profile_setup_stage = {}
 
 async def cmd_set_profile(message: Message):
     profile_setup_stage[message.from_user.id] = "weight"
-    await message.answer("Enter your weight (in kg):")
+    await message.answer("⚪️ Enter your weight (in kg):")
 
 async def process_profile_input(message: Message):
     user_id = str(message.from_user.id)
@@ -19,44 +19,44 @@ async def process_profile_input(message: Message):
         try:
             weight = float(message.text)
         except ValueError:
-            await message.answer("Invalid format. Please enter a number for weight.")
+            await message.answer("🚫 Invalid format. Please enter a number for weight.")
             return
         users[user_id] = {"weight": weight}
         profile_setup_stage[message.from_user.id] = "height"
-        await message.answer("Enter your height (in cm):")
+        await message.answer("⚪️ Enter your height (in cm):")
     elif stage == "height":
         try:
             height = float(message.text)
         except ValueError:
-            await message.answer("Invalid format. Please enter a number for height.")
+            await message.answer("🚫 Invalid format. Please enter a number for height.")
             return
         users[user_id]["height"] = height
         profile_setup_stage[message.from_user.id] = "age"
-        await message.answer("Enter your age:")
+        await message.answer("⚪️ Enter your age:")
     elif stage == "age":
         try:
             age = int(message.text)
         except ValueError:
-            await message.answer("Invalid format. Please enter a number for age.")
+            await message.answer("🚫 Invalid format. Please enter a number for age.")
             return
         users[user_id]["age"] = age
         profile_setup_stage[message.from_user.id] = "activity"
-        await message.answer("How many minutes of activity per day?")
+        await message.answer("⚪️ How many minutes of activity per day?")
     elif stage == "activity":
         try:
             activity = float(message.text)
         except ValueError:
-            await message.answer("Invalid format. Please enter a number for activity minutes.")
+            await message.answer("🚫 Invalid format. Please enter a number for activity minutes.")
             return
         users[user_id]["activity"] = activity
         profile_setup_stage[message.from_user.id] = "city"
-        await message.answer("Enter your city:")
+        await message.answer("⚪️ Enter your city:")
     elif stage == "city":
         users[user_id]["city"] = message.text.strip()
         profile_setup_stage.pop(message.from_user.id)
-        await message.answer("Profile saved! You can now use commands to log data and check your progress.")
+        await message.answer("✅ Profile saved! You can now use commands to log data and check your progress.")
     else:
-        await message.answer("Unknown command. Use /set_profile to start setup.")
+        await message.answer("🚫 Unknown command. Use /set_profile to start setup.")
     save_users(users)
 
 def register_profile_handlers(dp: Dispatcher):
