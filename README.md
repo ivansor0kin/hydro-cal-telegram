@@ -1,22 +1,19 @@
-# Telegram Bot for Water & Calorie Tracking
+# hydro-cal-bot
 
-## Запуск локально
-1. Установите зависимости:
+## Running Locally
+1. Install dependencies:
 pip install -r requirements.txt
-2. Укажите токен в файле config.py или используйте переменные среды.
-3. Запустите бота:
+2. Set the bot token in the config.py file or use environment variables.
+3. Start the bot:
 python bot.py
 
-## Запуск в Docker
-1. Соберите образ:
-docker build -t water-calorie-bot .
-2. Запустите контейнер:
-docker run -d --name wc-bot water-calorie-bot
+## Running in Docker
+Coming soon...
 
-## Команды бота
-- `/start` - приветствие
-- `/set_profile` - настройка профиля
-- `/log_water` <количество>
-- `/log_food` <продукт>
-- `/log_workout` <тип> <время мин>
-- `/check_progress` - проверка прогресса
+## Bot commands
+- `/start` - greetings
+- `/set_profile` - user profile set up
+- `/log_water` - log in the amount of consumed water (in ml.)
+- `/log_food` - enter the name of consumed product and the amout (in gr.)
+- `/log_workout` - enter workout type and workout duration (in min.)
+- `/check_progress` - check daily progress

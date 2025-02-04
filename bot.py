@@ -13,8 +13,6 @@ async def main():
     bot = Bot(token=TOKEN, default_bot_properties={"parse_mode": "HTML"})
     dp = Dispatcher(bot=bot)
 
-    # Устанавливаем список команд (меню) для бота,
-    # которое отображается пользователю в виде встроенного меню (квадрат с четырьмя кружками)
     commands = [
         BotCommand(command="set_profile", description="Set up your profile"),
         BotCommand(command="log_water", description="Log water intake"),

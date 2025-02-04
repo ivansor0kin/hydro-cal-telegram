@@ -7,14 +7,14 @@ def get_food_info(product_name):
     if response.status_code == 200:
         data = response.json()
         products = data.get('products', [])
-        if products:  # Проверяем, есть ли найденные продукты
+        if products:
             first_product = products[0]
             return {
-                'name': first_product.get('product_name', 'Неизвестно'),
+                'name': first_product.get('product_name', 'Unknown'),
                 'calories': first_product.get('nutriments', {}).get('energy-kcal_100g', 0)
             }
         return None
-    print(f"Ошибка: {response.status_code}")
+    print(f"Error: {response.status_code}")
     return None
 
 def get_weather(city):
@@ -30,6 +30,5 @@ def get_weather(city):
         description = data['weather'][0]['description']
         return temp
     else:
-        print(f"Ошибка: {response.status_code}")
+        print(f"Error: {response.status_code}")
         return None
-

@@ -13,7 +13,6 @@ async def process_profile_input(message: Message):
     user_id = str(message.from_user.id)
     stage = profile_setup_stage.get(message.from_user.id)
     if stage is None:
-        # Если пользователь не в режиме настройки, этот обработчик не должен срабатывать.
         return
     if stage == "weight":
         try:
