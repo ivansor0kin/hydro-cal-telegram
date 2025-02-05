@@ -62,20 +62,33 @@ User data is stored in a JSON file (`users.json`) and includes the following fie
 Below are some screenshots of the working bot in action:
 
 - **Pre-start:**
+  
   <img src="demo/1.png" width="300" alt="Profile Setup">
+  
 - **Start:**
+
   <img src="demo/2.png" width="300" alt="Profile Setup">
-- **Profile Setup:**  
+  
+- **Profile Setup:**
+
   <img src="demo/3_1.png" width="300" alt="Profile Setup">
   <img src="demo/3_2.png" width="300" alt="Profile Setup">
-- **Water Logging:**  
+  
+- **Water Logging:**
+
   <img src="demo/4.png" width="300" alt="Profile Setup">
-- **Food Logging:**  
+
+- **Food Logging:**
+
   <img src="demo/5.png" width="300" alt="Profile Setup">
   <img src="demo/7.png" width="300" alt="Profile Setup">
-- **Workout Logging:**  
+
+- **Workout Logging:**
+
   <img src="demo/6.png" width="300" alt="Profile Setup">
-- **Progress Report:**  
+
+- **Progress Report:**
+
   <img src="demo/8.png" width="300" alt="Profile Setup">
 
 ## Obtaining OpenWeatherMap API
