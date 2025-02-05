@@ -57,7 +57,7 @@ User data is stored in a JSON file (`users.json`) and includes the following fie
 - Persisted data locally in a JSON file, enabling accurate progress reports.
 - The solution is containerized with Docker and ready for deployment on an online server.
 
-## Screenshots
+## Demo
 
 Below are some screenshots of the working bot in action:
 
@@ -71,11 +71,6 @@ Below are some screenshots of the working bot in action:
   ![Workout Logging](images/workout_logging.png)
 - **Progress Report:**  
   ![Progress Report](images/progress_report.png)
-
-### How to Add Screenshots:
-1. Create an `images` folder in the repository.
-2. Upload your screenshots to this folder.
-3. Reference them in the README using relative paths as shown above.
 
 ## Obtaining OpenWeatherMap API
 
