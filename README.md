@@ -1,5 +1,88 @@
 # hydro-cal-bot
 
+## Project Link
+
+@HydroCalBot
+
+## Project Goal
+
+Develop a Telegram bot that helps users calculate their personalized daily water and calorie needs and track their workouts and meals. The bot uses user profile data along with external information (weather data, nutritional data) to provide accurate recommendations and interactive logging.
+
+## Completed Tasks
+
+### 1. Personalized Daily Needs Calculation:
+- Calculated daily water intake using the formula:  
+  **Base water = weight (kg) × 30 ml**  
+  **Additional water = extra for physical activity (500 ml per 30 minutes) and hot weather (>25°C)**
+- Calculated daily calorie needs using a formula similar to the Harris-Benedict equation with added calories for physical activity.
+- Integrated with OpenWeatherMap API to adjust water needs based on the current temperature.
+- Integrated with a food API (e.g., OpenFoodFacts) to retrieve nutritional data for accurate calorie tracking.
+
+### 2. Logging and Tracking:
+- Implemented commands for setting up a user profile (`/set_profile`), logging water (`/log_water`), logging food (`/log_food`), and logging workouts (`/log_workout`).
+- Developed interactive, multi-step conversations for each logging command to enhance user experience (e.g., prompting for water amount, product name and grams, workout type and duration).
+- Persisted user data in a local JSON file (`users.json`), including profile details, logged water, calories, and calories burned.
+
+### 3. Interactive Telegram Bot:
+- Built the bot using `aiogram` for asynchronous command handling.
+- Provided a custom inline keyboard and a persistent bot command menu for easy navigation.
+- Implemented a progress report command (`/check_progress`) that displays current water intake, calorie consumption, calories burned, and remaining goals.
+
+## Data Used
+
+User data is stored in a JSON file (`users.json`) and includes the following fields:
+- `weight`: User's weight (in kg)
+- `height`: User's height (in cm)
+- `age`: User's age
+- `activity`: Minutes of physical activity per day
+- `city`: User's city (used for weather-based adjustments)
+- `water_goal`: Calculated daily water intake goal
+- `calorie_goal`: Calculated daily calorie target
+- `logged_water`: Total water consumed
+- `logged_calories`: Total calories consumed
+- `burned_calories`: Calories burned through workouts
+
+## Technologies and Tools
+
+- **Programming Language:** Python
+- **Libraries:** aiogram, requests, asyncio, json
+- **APIs:** OpenWeatherMap, OpenFoodFacts (or equivalent)
+- **Deployment:** Docker for containerized deployment; local execution for testing
+
+## Results
+
+- Developed a fully functional Telegram bot for tracking daily water, calorie intake, and workouts.
+- Provided personalized recommendations based on user input and external API data.
+- Implemented interactive, multi-step logging for water, food, and workouts to improve user experience.
+- Persisted data locally in a JSON file, enabling accurate progress reports.
+- The solution is containerized with Docker and ready for deployment on an online server.
+
+## Screenshots
+
+Below are some screenshots of the working bot in action:
+
+- **Profile Setup:**  
+  ![Profile Setup](images/profile_setup.png)
+- **Water Logging:**  
+  ![Water Logging](images/water_logging.png)
+- **Food Logging:**  
+  ![Food Logging](images/food_logging.png)
+- **Workout Logging:**  
+  ![Workout Logging](images/workout_logging.png)
+- **Progress Report:**  
+  ![Progress Report](images/progress_report.png)
+
+### How to Add Screenshots:
+1. Create an `images` folder in the repository.
+2. Upload your screenshots to this folder.
+3. Reference them in the README using relative paths as shown above.
+
+## Obtaining OpenWeatherMap API
+
+1. Visit [OpenWeatherMap](https://openweathermap.org/)
+2. Create an account
+3. Retrieve your API KEY from "My API keys"
+
 ## Running Locally
 1. Install dependencies:
 pip install -r requirements.txt
