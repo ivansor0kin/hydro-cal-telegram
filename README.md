@@ -1,6 +1,6 @@
 # hydro-cal-bot (currently not deployed, can be run locally only)
 
-## Project
+## Description
 
 HydroCal (@HydroCalBot) is a Telegram bot that helps users calculate their personalized daily water and calorie needs and track their workouts and meals. The bot uses user profile data along with external information (weather data, nutritional data) to provide accurate recommendations and interactive logging.
 
