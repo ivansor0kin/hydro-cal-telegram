@@ -12,6 +12,40 @@ HydroCal (@HydroCalBot) is a Telegram bot that helps users calculate their perso
 - `/log_workout` - enter workout type and workout duration (in min.)
 - `/check_progress` - check daily progress
 
+## Demo
+
+Below are some screenshots of the working bot in action:
+
+- **Pre-start:**
+  
+  <img src="demo/1.png" width="300" alt="Profile Setup">
+  
+- **Start:**
+
+  <img src="demo/2.png" width="300" alt="Profile Setup">
+  
+- **Profile Setup:**
+
+  <img src="demo/3_1.png" width="300" alt="Profile Setup">
+  <img src="demo/3_2.png" width="300" alt="Profile Setup">
+  
+- **Water Logging:**
+
+  <img src="demo/4.png" width="300" alt="Profile Setup">
+
+- **Food Logging:**
+
+  <img src="demo/5.png" width="300" alt="Profile Setup">
+  <img src="demo/7.png" width="300" alt="Profile Setup">
+
+- **Workout Logging:**
+
+  <img src="demo/6.png" width="300" alt="Profile Setup">
+
+- **Progress Report:**
+
+  <img src="demo/8.png" width="300" alt="Profile Setup">
+
 ## Completed Tasks
 
 ### 1. Personalized Daily Needs Calculation:
@@ -60,40 +94,6 @@ User data is stored in a JSON file (`users.json`) and includes the following fie
 - Implemented interactive, multi-step logging for water, food, and workouts to improve user experience.
 - Persisted data locally in a JSON file, enabling accurate progress reports.
 - The solution is containerized with Docker and ready for deployment on an online server.
-
-## Demo
-
-Below are some screenshots of the working bot in action:
-
-- **Pre-start:**
-  
-  <img src="demo/1.png" width="300" alt="Profile Setup">
-  
-- **Start:**
-
-  <img src="demo/2.png" width="300" alt="Profile Setup">
-  
-- **Profile Setup:**
-
-  <img src="demo/3_1.png" width="300" alt="Profile Setup">
-  <img src="demo/3_2.png" width="300" alt="Profile Setup">
-  
-- **Water Logging:**
-
-  <img src="demo/4.png" width="300" alt="Profile Setup">
-
-- **Food Logging:**
-
-  <img src="demo/5.png" width="300" alt="Profile Setup">
-  <img src="demo/7.png" width="300" alt="Profile Setup">
-
-- **Workout Logging:**
-
-  <img src="demo/6.png" width="300" alt="Profile Setup">
-
-- **Progress Report:**
-
-  <img src="demo/8.png" width="300" alt="Profile Setup">
 
 ## Obtaining OpenWeatherMap API
 
