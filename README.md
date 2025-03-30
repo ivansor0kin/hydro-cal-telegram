@@ -1,8 +1,16 @@
-# hydro-cal-bot
+# hydro-cal-bot (currently not deployed, can be run locally only)
 
 ## Project
 
 HydroCal (@HydroCalBot) is a Telegram bot that helps users calculate their personalized daily water and calorie needs and track their workouts and meals. The bot uses user profile data along with external information (weather data, nutritional data) to provide accurate recommendations and interactive logging.
+
+## Bot commands
+- `/start` - greetings
+- `/set_profile` - user profile set up
+- `/log_water` - log in the amount of consumed water (in ml.)
+- `/log_food` - enter the name of consumed product and the amout (in gr.)
+- `/log_workout` - enter workout type and workout duration (in min.)
+- `/check_progress` - check daily progress
 
 ## Completed Tasks
 
@@ -99,11 +107,3 @@ pip install -r requirements.txt
 2. Set the bot token in the config.py file or use environment variables.
 3. Start the bot:
 python bot.py
-
-## Bot commands
-- `/start` - greetings
-- `/set_profile` - user profile set up
-- `/log_water` - log in the amount of consumed water (in ml.)
-- `/log_food` - enter the name of consumed product and the amout (in gr.)
-- `/log_workout` - enter workout type and workout duration (in min.)
-- `/check_progress` - check daily progress
